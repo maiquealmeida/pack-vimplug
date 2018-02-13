@@ -1,6 +1,12 @@
 " Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
 " - Avoid using standard Vim directory names like 'plugin'
+
+let g:python_host_prog = 'C:\Python27'
+let g:python3_host_prog = 'C:\Python36\'
+"let g:deoplete#enable_at_startup = 1
+let mapleader="\<SPACE>"
+
 call plug#begin('~/AppData/Local/nvim/plugged')
 
 " Make sure you use single quotes
@@ -36,5 +42,52 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 "Neoformat
 Plug 'sbdchd/neoformat'
 
-" Initialize plugin system
+"Introduz uma linha de status diferenciada
+" Plug 'powerline/powerline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+" Vim script for text filtering and alignment
+Plug 'godlygeek/tabular'
+
+" An up-to-date Vim syntax for PHP (7.x supported)
+Plug 'stanangeloff/php.vim'
+
+" React JSX syntax highlighting and indenting for vim.
+Plug 'mxw/vim-jsx'
+
+" HTML5 omnicomplete and syntax
+Plug 'othree/html5.vim'
+
+" Improved PHP omnicompletion
+Plug 'shawncplus/phpcomplete.vim'
+
+" A better JSON for Vim: distinct highlighting of keywords vs values, JSON-specific (non-JS) warnings, quote co
+Plug 'elzr/vim-json'
+
+" Tools and environment to make Vim superb for developing with Node.js. Like
+" Rails.vim for Node.
+Plug 'moll/vim-node'
+
+" Vim plugin that displays tags in a window, ordered by scope
+Plug 'majutsushi/tagbar'
+
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'roxma/nvim-yarp'   
+" Plug 'roxma/vim-hug-neovim-rpc'
 call plug#end()
+
+let g:airline#extensions#tabline#enabled = 2
+let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#right_sep = ' '
+let g:airline#extensions#tabline#right_alt_sep = '|'
+let g:airline_left_sep = ' '
+let g:airline_left_alt_sep = '|'
+let g:airline_right_sep = ' '
+let g:airline_right_alt_sep = '|'
+let g:airline_theme='kalisi'
+
+let g:tagbar_ctags_bin='c:\tools\ctags\ctags.exe'
+
